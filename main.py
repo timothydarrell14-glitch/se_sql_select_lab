@@ -42,7 +42,7 @@ df_name_length = pd.read_sql("SELECT LENGTH(lastName) AS name_length FROM employ
 
 # STEP 7
 # Replace None with your code
-df_short_title = pd.read_sql("SELECT SUBSTRING(jobTitle, 1, 2) AS short_title FROM employees", conn)
+df_short_title = pd.read_sql("SELECT SUBSTR(jobTitle, 1, 2) AS short_title FROM employees", conn)
 # print(df_short_title)
 
 order_details = pd.read_sql("""SELECT * FROM orderDetails;""", conn)
